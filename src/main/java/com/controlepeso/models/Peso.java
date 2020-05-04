@@ -1,11 +1,13 @@
 package com.controlepeso.models;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+@Entity
 public class Peso {
 	
 	@Id
