@@ -2,13 +2,11 @@ package com.controlepeso.models;
 
 import java.util.List;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+@Entity
 public class IMC {
 	private static final long serialVersionUID = 1L;
 	
@@ -16,18 +14,17 @@ public class IMC {
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private int id;
 	
-	@NotEmpty
 	private int peso;
-	@NotEmpty
+
 	private int altura;
-	@NotEmpty
+
 	private int resultado;
-	@NotEmpty
+
 	private String data;
 	
-	@OneToMany
+	/*@OneToMany
 	private List<Peso> pesos;
-
+*/
 	public int getId() {
 		return id;
 	}
@@ -67,7 +64,7 @@ public class IMC {
 	public void setData(String data) {
 		this.data = data;
 	}
-
+/*
 	public List<Peso> getPesos() {
 		return pesos;
 	}
@@ -75,7 +72,7 @@ public class IMC {
 	public void setPesos(List<Peso> pesos) {
 		this.pesos = pesos;
 	}
-
+*/
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
